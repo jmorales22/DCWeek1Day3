@@ -16,7 +16,8 @@ service_lower = service.lower()
 # This will prompt the user to enter the number of ways the bill should be split
 split = int(input("Split how many ways? "))
 
-# This if statement returns the tip and total bill amount if the service was good
+# This if statement returns the tip, total bill amount if the service was good
+# It also divides the amount by the number of people
 if service_lower == "good":
     var_tip1 = float(0.2*amount)
     var_total1 = float(var_tip1 + amount)
@@ -24,7 +25,8 @@ if service_lower == "good":
     print("Tip amount: " + str('%.2f' % var_tip1))
     print("Total amount:" + str('%.2f' % var_total1))
     print("Amount per person: " + str('%.2f' % per_person1))
-# This if statement returns the tip and total bill amount if the service was fair
+# This if statement returns the tip, total bill amount if the service was fair
+# It also divides the amount by the number of people
 elif service_lower == "fair":
     var_tip2 = float(0.15*amount)
     var_total2 = float(var_tip2 + amount)
@@ -32,7 +34,8 @@ elif service_lower == "fair":
     print("Tip amount: " + str('%.2f' %var_tip2))
     print("Total amount:" + str('%.2f' %var_total2))
     print("Amount per person: " + str('%.2f' % per_person2))
-# This else statment covers bad service and any other entries that may have been made
+# This else statment covers bad service and is the default for any bad entries that may have been made
+# It als divides the amount by the number of people
 else:
     var_tip3 = float(0.1*amount)
     var_total3 = float(var_tip3 + amount)
